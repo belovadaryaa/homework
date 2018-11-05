@@ -1,0 +1,12 @@
+import re
+
+
+def findemail(text):
+    f = open(text)
+    s = f.read()
+    f.close()
+    email = re.findall(r'[\w.-]+@[\w.-]+\.?[\w]+?', s)
+    print(email)
+
+
+findemail('C:/Users/danju/Desktop/for_email.txt')
