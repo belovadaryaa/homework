@@ -1,0 +1,13 @@
+from collections import Counter
+import re
+
+
+def count_words(text):
+    f = open(text)
+    s = f.read()
+    f.close()
+    count_words = Counter(x for x in re.findall(r'[A-z\']{3,}', s))
+    print(count_words.most_common(10))
+
+
+count_words('C:/Users/danju/Desktop/war-peace.txt')
