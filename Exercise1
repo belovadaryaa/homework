@@ -1,0 +1,17 @@
+def f(n):
+    all_numbers = lambda f: f if f <= 2 else all_numbers(f-1) + all_numbers(f-2)
+    fib = list(filter(lambda e: e % 2 == 0, map(all_numbers, range(0, n))))
+    print(fib)
+
+
+f(10)
+
+
+def se(n):
+    nums = list(range(2, n))
+    for number in nums:
+        nums = list(filter(lambda x: (x == number) or not (x % number == 0), nums))
+    print(nums)
+
+
+se(64)
